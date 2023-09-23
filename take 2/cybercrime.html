@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Cyber Police</title>
+    <link rel="stylesheet" href="cybercrime.css">
+</head>
+<body>
+    <header>
+        <h1>Contact Cyber Police</h1>
+    </header>
+    <main>
+        <section id="introduction">
+            <h2>Introduction</h2>
+            <p>Welcome to the Contact Cyber Police portal. If you have encountered a cybercrime or suspicious online activity, we are here to help. Please use the form below to report the incident to us.</p>
+        </section>
+
+        <section id="procedures">
+            <h2>Procedures</h2>
+            <ol>
+                <li>Fill out the form with accurate details regarding the cyber incident.</li>
+                <li>If you have any evidence, please attach it using the provided file input.</li>
+                <li>Submit the form for our investigation.</li>
+                <li>Our cybercrime unit will review your report and take appropriate action.</li>
+                <li>You will receive a confirmation message once your report is submitted.</li>
+            </ol>
+        </section>
+
+        <section id="contact-form">
+            <h2>Contact Cyber Police</h2>
+            <div class="form-container">
+                <form id="cyberpolice-form">
+                    <label for="name">Your Name:</label>
+                    <input type="text" id="name" name="name" required>
+                    
+                    <label for="email">Your Email:</label>
+                    <input type="email" id="email" name="email" required>
+
+                    <label for="phone">Your Phone:</label>
+                    <input type="tel" id="phone" name="phone" required>
+                    
+                    <label for="incident-description">Incident Description:</label>
+                    <textarea id="incident-description" name="incident-description" rows="4" required></textarea>
+                    
+                    <label for="evidence">Evidence (if any):</label>
+                    <input type="file" id="evidence" name="evidence">
+                    
+                    <button type="submit">Submit Report</button>
+                </form>
+                <div id="confirmation-message"></div>
+            </div>
+        </section>
+    </main>
+    
+    <footer>
+        <p>&copy; 2023 Contact Cyber Police</p>
+    </footer>
+    
+    <script src="cybercrime.js" defer></script>
+</body>
+</html>

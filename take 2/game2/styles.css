@@ -1,0 +1,85 @@
+/* Styles for Nature Soundscape */
+
+/* Nature Soundscape heading styles */
+.nature-heading {
+    font-size: 36px;
+    text-align: center;
+    color: #1e3c72; /* Deep blue */
+    margin: 20px 0;
+    padding: 10px;
+    border: 2px solid #1e3c72;
+    border-radius: 10px;
+    background-color: #fff;
+    animation: glow 3s ease infinite alternate; /* Add a glowing animation */
+}
+
+@keyframes glow {
+    0% {
+        box-shadow: 0 0 5px rgba(30, 60, 114, 0.5);
+    }
+    100% {
+        box-shadow: 0 0 20px rgba(30, 60, 114, 0.9);
+    }
+}
+
+/* Sounds container styles */
+.sounds-container {
+    text-align: center;
+    margin: 20px auto;
+}
+
+/* Sound button styles */
+.sound-button {
+    padding: 10px 20px;
+    background-color: #1e3c72; /* Deep blue */
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    margin: 5px;
+    cursor: pointer;
+}
+
+.sound-button:hover {
+    background-color: #0c7c92; /* Darker blue on hover */
+}
+
+/* Footer styles */
+footer {
+    background-color: #1e3c72; /* Deep blue */
+    color: #fff;
+    text-align: center;
+    padding: 10px;
+    font-size: 14px;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}
+
+
+/* Visuals container styles */
+.visuals-container {
+    text-align: center;
+    display: none; /* Initially hide the visuals container */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 100;
+}
+
+/* Visual image styles */
+.visual-image {
+    max-width: 100%;
+    height: auto;
+    animation: float 4s ease-in-out infinite; /* Add a floating animation */
+}
+
+@keyframes float {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px); /* Adjust the floating distance */
+    }
+}
