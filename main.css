@@ -99,60 +99,7 @@ body {
     pointer-events: auto; /* Enable pointer events when the menu is active */
 }
 
-
-
-.footer-ribbon {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: rgba(0, 0, 0, 0.5);
-    height: 50px;
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    z-index: 100;
+.main-content h2:hover {
+    color: #fff; /* Change the text color to white on hover */
+    transition: color 0.3s; /* Add a smooth transition effect */
 }
-.footer-content {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 20px;
-}
-
-.contact-us a,
-.license {
-    color: #fff;
-    text-decoration: none;
-    font-size: 14px;
-}
-
-
-.contact-us a:hover {
-    text-decoration: underline;
-}
-
-.email-options {
-    display: none;
-    flex-direction: column;
-    align-items: center;
-    margin-top: 10px;
-    color: #333;
-}
-
-.email-options p {
-    font-weight: bold;
-}
-
-.email-options a {
-    text-decoration: none;
-    margin: 5px 0;
-    color: #007BFF;
-}
-
-.email-options a:hover {
-    text-decoration: underline;
-}
-
