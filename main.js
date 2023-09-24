@@ -1,45 +1,59 @@
+// script.js
 document.addEventListener("DOMContentLoaded", function () {
-    const contactLink = document.getElementById("contact-link");
-    const contactOptions = document.getElementById("contact-options");
-    const emailOptions = document.getElementById("email-options");
-    let isContactOptionsOpen = false; // Track if the contact options menu is open
-    let isEmailOptionsOpen = false; // Track if the email options submenu is open
-
-    // Function to toggle the contact options menu
-    function toggleContactOptions() {
-        if (isContactOptionsOpen) {
-            contactOptions.style.display = "none";
-        } else {
-            contactOptions.style.display = "flex";
-        }
-        isContactOptionsOpen = !isContactOptionsOpen;
+    const menuButton = document.getElementById("menu-button");
+    const menuOptions = document.getElementById("menu-options");
+    let isMenuOpen = false; // Track if the menu is open
+    
+    // Define the distance threshold for menu appearance
+    const distanceThreshold = 50; // Adjust as needed
+    
+    // Function to check if cursor is close to the button
+    function isCursorClose(event) {
+        const buttonRect = menuButton.getBoundingClientRect();
+        const mouseX = event.clientX;
+        const mouseY = event.clientY;
         
-        // Close the email options submenu if it's open
-        if (isEmailOptionsOpen) {
-            toggleEmailOptions();
-        }
+        const isCloseX = mouseX >= buttonRect.left - distanceThreshold && mouseX <= buttonRect.right + distanceThreshold;
+        const isCloseY = mouseY >= buttonRect.top - distanceThreshold && mouseY <= buttonRect.bottom + distanceThreshold;
+        
+        return isCloseX && isCloseY;
     }
-
-    // Function to toggle the email options submenu
-    function toggleEmailOptions() {
-        if (isEmailOptionsOpen) {
-            emailOptions.style.display = "none";
+    
+    // Function to toggle the menu
+    function toggleMenu() {
+        if (isMenuOpen) {
+            menuButton.classList.remove("active");
+            menuOptions.style.left = "-100%";
         } else {
-            emailOptions.style.display = "flex";
+            menuButton.classList.add("active");
+            menuOptions.style.left = "0";
         }
-        isEmailOptionsOpen = !isEmailOptionsOpen;
+        isMenuOpen = !isMenuOpen;
     }
-
-    // Toggle the contact options menu when "Contact Us" is clicked
-    contactLink.addEventListener("click", function (event) {
-        event.preventDefault(); // Prevent the link from navigating
-        toggleContactOptions();
+    
+    // Show the menu when cursor is close to the button
+    menuButton.addEventListener("mouseenter", function (event) {
+        if (!isMenuOpen && isCursorClose(event)) {
+            toggleMenu();
+        }
     });
-
-    // Close the email options menu when clicking anywhere else on the page
+    
+    // Hide the menu when cursor is not close to the button
+    menuButton.addEventListener("mouseleave", function (event) {
+        if (!isMenuOpen && !isCursorClose(event)) {
+            toggleMenu();
+        }
+    });
+    
+    // Toggle the menu when the button is clicked
+    menuButton.addEventListener("click", function () {
+        toggleMenu();
+    });
+    
+    // Close the menu when clicking anywhere else on the page
     document.addEventListener("click", function (event) {
-        if (isEmailOptionsOpen && event.target !== contactLink) {
-            toggleEmailOptions();
+        if (isMenuOpen && !menuButton.contains(event.target)) {
+            toggleMenu();
         }
     });
 });
