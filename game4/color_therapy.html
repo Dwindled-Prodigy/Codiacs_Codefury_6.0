@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Color Therapy</title>
+    <link rel="stylesheet" href="color_therapy_styles.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/0.5.3/html2canvas.min.js"></script>
+</head>
+<body>
+    <header>
+        <h1>Create Beautiful Art with Calming Colors</h1>
+    </header>
+    <main>
+        <div class="color-palette">
+            <button id="color-black" class="color-button" style="background-color: #000;"></button>
+            <button id="color-red" class="color-button" style="background-color: #FF0000;"></button>
+            <button id="color-green" class="color-button" style="background-color: #00FF00;"></button>
+            <button id="color-blue" class="color-button" style="background-color: #0000FF;"></button>
+        </div>
+        <canvas id="art-canvas" width="800" height="600"></canvas>
+    </main>
+    <footer>
+        <button id="clear-button">Clear Canvas</button>
+        <button id="save-button">Save Art</button>
+    </footer>
+    <script src="color_therapy_script.js"></script>
+</body>
+</html>

@@ -1,0 +1,136 @@
+/* Reset some default styles */
+body, h1, h2, h3, p, ul, li, label, input, textarea {
+    margin: 0;
+    padding: 0;
+    font-family: 'Montserrat', sans-serif; /* Uniform font family */
+}
+
+/* Style the header */
+header {
+    background-color: #1e3c72; /* Deep blue */
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+    font-size: 28px;
+}
+
+/* Style the main content */
+main {
+    background-image: url('https://wallpaperaccess.com/full/99807.jpg'); /* Background image for section */
+    background-size: cover;
+    padding: 20px;
+}
+
+section {
+    border: 1px #dddddd80;
+    padding: 20px;
+    margin-bottom: 20px;
+    background-color: #f5f5f57b;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+h2 {
+    margin-bottom: 20px;
+    font-size: 24px;
+}
+
+/* Style the introduction and procedures sections */
+#introduction, #procedures {
+    background-color: #ffffff84;
+    padding: 20px;
+}
+
+#procedures ol {
+    padding-left: 20px;
+}
+
+#procedures li {
+    margin-bottom: 10px;
+}
+
+/* Style the contact form container */
+.form-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#cyberpolice-form {
+    text-align: center;
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+#cyberpolice-form label {
+    display: block;
+    margin-top: 10px;
+    font-weight: bold;
+}
+
+#cyberpolice-form input[type="text"],
+#cyberpolice-form input[type="email"],
+#cyberpolice-form input[type="tel"],
+#cyberpolice-form textarea,
+#cyberpolice-form input[type="file"],
+#cyberpolice-form button {
+    width: 100%;
+    padding: 10px;
+    margin-top: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    transition: border-color 0.3s, background-color 0.3s, transform 0.3s;
+    font-size: 16px;
+    background-color: #f9f9f9;
+}
+
+#cyberpolice-form input[type="text"]:focus,
+#cyberpolice-form input[type="email"]:focus,
+#cyberpolice-form input[type="tel"]:focus,
+#cyberpolice-form textarea:focus,
+#cyberpolice-form button:hover {
+    border-color: #17a2b8; /* Cool blue color on focus/hover */
+    background-color: #17a2b8; /* Cool blue background on focus/hover */
+    color: #fff;
+    transform: translateY(-2px);
+    outline: none;
+}
+
+#cyberpolice-form button {
+    font-weight: bold;
+    cursor: pointer;
+    margin-top: 20px;
+    background-color: #1e3c72; /* Deep blue */
+    color: #fff;
+}
+
+#cyberpolice-form button:hover {
+    background-color: #0c7c92; /* Darker blue on hover */
+}
+
+#confirmation-message {
+    text-align: center;
+    font-weight: bold;
+    margin-top: 20px;
+    color: #28a745; /* Green color for success message */
+    display: none;
+    animation: fadeIn 1s ease-in-out;
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+/* Style the footer */
+footer {
+    background-color: #1e3c72; /* Deep blue */
+    color: #fff;
+    text-align: center;
+    padding: 10px;
+    font-size: 14px;
+}
